@@ -3,7 +3,7 @@ FROM golang:1.15.8
 WORKDIR /build
 ADD . /build/
 
-RUN RUN CGO_ENABLED=0 GOOS=linux go build -mod=vendor -o api-server .
+RUN CGO_ENABLED=0 GOOS=linux go build -mod=vendor -o api-server .
 
 FROM scratch
 
